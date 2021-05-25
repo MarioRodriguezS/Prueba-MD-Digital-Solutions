@@ -1,0 +1,81 @@
+:root {
+  --icon-color--: #fff;
+}
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+body {
+  margin: 1vw;
+}
+header {
+  text-align: center;
+}
+.container__video {
+  width: 100%;
+  position: relative;
+}
+.video {
+  width: inherit;
+  height: 100%;
+}
+.video__transparencia {
+  position: absolute;
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 83%;
+  padding-bottom: 1vh;
+  z-index: 999;
+  transition: all 0.3s ease-out;
+}
+.play-icon,
+.pause-icon {
+  display: none;
+  font-size: 7rem;
+  color: var(--icon-color--);
+  cursor: pointer;
+}
+.play-icon:hover,
+.pause-icon:hover {
+  opacity: 0.7;
+}
+.active-icon {
+  display: block;
+}
+.is-active {
+  visibility: visible;
+}
+@media screen and (min-width: 720px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .container__video {
+    width: 80%;
+    position: relative;
+    text-align: center;
+  }
+  .video__transparencia {
+    width: 80%;
+    right: 10%;
+  }
+  .informacion {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .body {
+    font-size: 0.8em;
+  }
+}
